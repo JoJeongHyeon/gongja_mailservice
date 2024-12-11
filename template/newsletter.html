@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공자의 고민 상담소</title>
+    <style>
+        /* 이메일 클라이언트 호환성을 위한 리셋 */
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        /* 메인 스타일 */
+        .newsletter-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .content {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .quote-section {
+            background-color: #edf2f7;
+            border-left: 4px solid #4a5568;
+            margin: 20px 0;
+            padding: 15px;
+        }
+        
+        .advice-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        
+        /* 반응형 디자인 */
+        @media only screen and (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table class="newsletter-container" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td class="header">
+                <h1>🎭 공자의 고민 상담소</h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="content">
+                <p>안녕하시게나,<br>
+                나, 공자가 운영하는 고민 상담소라네.</p>
+                
+                <div class="quote-section">
+                    <p><strong>고민 내용:</strong><br>
+                    {{ gomin_content }}</p>
+                </div>
+                
+                <div class="advice-section">
+                    <h2 style="color: #4a5568; margin-top: 0;">공자의 조언</h2>
+                    {{ message }}
+                </div>
+                
+                <p style="margin-top: 30px;">
+                    오늘도 좋은 하루가 되었으면 좋겠네!<br>
+                    - 공자 드림
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer">
+                <p>이 메일을 더 이상 받고 싶지 않으시다면 <a href="#">구독 해지</a>를 클릭하세요.</p>
+                <p style="margin-top: 10px; font-size: 12px;">© 2024 공자의 고민 상담소. All rights reserved.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
